@@ -5,37 +5,33 @@
 /* trird text color: #ffffff */
 /* accent color: #2196F3 */
 
+/* Базовые стили */
 :root {
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
   --accent-text-color: #2196f3;
   --third-text-color: #ffffff;
 }
+
 body {
   color: var(--primary-text-color);
   font-family: Roboto;
 }
-/* .site-nav > a {
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 31px;
-} */
+
 li {
   list-style-type: none;
 }
 
-/* БЛОК НАВИГАЦИИ */
+/* Шапка сайта */
 .logo {
   text-decoration: none;
-  color: var(--secondary-text-color);
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
   letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
 }
 .logo > span {
   color: var(--accent-text-color);
@@ -52,5 +48,19 @@ li {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
+  color: var(--accent-text-color);
+}
+
+.contacts-top .link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.contacts-top .link:hover,
+.contacts-top .link:focus {
   color: var(--accent-text-color);
 }
