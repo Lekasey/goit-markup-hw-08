@@ -16,5 +16,6 @@
   "useTabs": true,
   "vueIndentScriptAndStyle": false,
   "singleAttributePerLine": false,
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "editor.renameOnType": true
 }
