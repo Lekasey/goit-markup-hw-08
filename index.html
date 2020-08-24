@@ -14,24 +14,27 @@
   <body>
     <!-- Шапка сайта -->
     <header>
-      <nav class="site-nav">
-        <a href="./index.html" class="logo"><span>Web</span>Studio</a>
-        <ul>
-          <li><a href="./index.html" class="link current">Студия</a></li>
-          <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-          <li><a href="" class="link">Контакты</a></li>
+      <div class="container">
+        <nav class="site-nav">
+          <a href="./index.html" class="logo"><span>Web</span>Studio</a>
+          <ul class="list">
+            <li><a href="./index.html" class="link current">Студия</a></li>
+            <li><a href="./portfolio.html" class="link">Портфолио</a></li>
+            <li><a href="" class="link">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <ul class="contacts-top list">
+          <li>
+            <a href="mailto:info@devstudio.com" class="link"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a href="tel:+38096111111111" class="link">+38 096 111 11 11</a>
+          </li>
         </ul>
-      </nav>
-      <ul class="contacts-top">
-        <li>
-          <a href="mailto:info@devstudio.com" class="link"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a href="tel:+38096111111111" class="link">+38 096 111 11 11</a>
-        </li>
-      </ul>
+      </div>
     </header>
     <!-- Уникальный контент -->
     <main>
@@ -46,43 +49,48 @@
 
       <!-- Преимущества -->
       <section class="advantages">
-        <h2>Преимущества</h2>
-        <ul>
-          <li>
-            <h3>Внимание к деталям</h3>
-            <p>
-              Идейные соображения, а также начало повседневной работы по
-              формированию позиции.
-            </p>
-          </li>
-          <li>
-            <h3>Пунктуальность</h3>
-            <p>
-              Задача организации, в особенности же рамки и место обучения кадров
-              влечет за собой.
-            </p>
-          </li>
-          <li>
-            <h3>Планирование</h3>
-            <p>
-              Равным образом консультация с широким активом в значительной
-              степени обуславливает.
-            </p>
-          </li>
-          <li>
-            <h3>Современные технологии</h3>
-            <p>
-              Значимость этих проблем настолько очевидна, что реализация
-              плановых заданий.
-            </p>
-          </li>
-        </ul>
+        <div class="container">
+          <h2>Преимущества</h2>
+          <ul class="advantage-list list">
+            <li>
+              <h3>Внимание к деталям</h3>
+              <p>
+                Идейные соображения, а также начало повседневной работы по
+                формированию позиции.
+              </p>
+            </li>
+
+            <li>
+              <h3>Пунктуальность</h3>
+              <p>
+                Задача организации, в особенности же рамки и место обучения
+                кадров влечет за собой.
+              </p>
+            </li>
+
+            <li>
+              <h3>Планирование</h3>
+              <p>
+                Равным образом консультация с широким активом в значительной
+                степени обуславливает.
+              </p>
+            </li>
+
+            <li>
+              <h3>Современные технологии</h3>
+              <p>
+                Значимость этих проблем настолько очевидна, что реализация
+                плановых заданий.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Чем мы занимаемся -->
       <section class="working">
         <h2>Чем мы занимаемся</h2>
-        <ul>
+        <ul class="list">
           <li>
             <a href=""></a
             ><img
@@ -112,7 +120,7 @@
       <!-- Наша команда -->
       <section class="team">
         <h2>Наша команда</h2>
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./image/ihor-demyanenko.jpg"
