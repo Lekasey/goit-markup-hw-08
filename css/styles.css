@@ -7,6 +7,7 @@
 /* team-block color: #F5F4FA */
 /* 'we are doing' block color: #E5E5E5  */
 /* address color: rgba(255, 255, 255, 0.6); */
+/* hdr-line-color: #ECECEC */
 
 /* Базовые стили */
 :root {
@@ -18,6 +19,7 @@
   --light-gray: #f5f4fa;
   --we-are-doin-block-color: #e5e5e5;
   --address-color: rgba(255, 255, 255, 0.6);
+  --hdr-line-color: #ececec;
 }
 
 body {
@@ -28,6 +30,11 @@ body {
   font-style: normal;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .list {
   list-style-type: none;
   margin-top: 0;
@@ -35,14 +42,10 @@ body {
   padding-right: 0;
   padding-left: 0;
 }
-a {
-  text-decoration-line: none;
-}
 
 h2 {
   margin-top: 0;
-
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -51,18 +54,40 @@ h2 {
 }
 
 .container {
-  width: 1170px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #cccccc;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  text-decoration-line: none;
+}
 /* Шапка сайта */
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  align-items: center;
+}
 .logo {
+  margin-right: 93px;
   font-family: "Raleway", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   color: var(--secondary-text-color);
@@ -74,16 +99,17 @@ h2 {
 .logo .logo-white {
   color: var(--third-text-color);
 }
-.link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-}
 
 .site-nav .current {
   color: var(--accent-text-color);
+}
+
+.site-nav-list li {
+  margin-right: 50px;
+}
+
+.contacts-top {
+  margin-left: auto;
 }
 
 .contacts-top .link {
@@ -93,15 +119,30 @@ h2 {
   color: var(--primary-text-color);
 }
 
+.contacts-top .contact:not(:last-child) {
+  margin-right: 50px;
+}
+
 .link:hover,
 .link:focus {
   color: var(--accent-text-color);
 }
 
+.header-line {
+  border-bottom: 1px solid var(--hdr-line-color);
+  flex-grow: 1;
+}
 /* Герой */
-.hero {
-  background-color: var(--background-gray);
+.hero-front {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 696px;
   text-align: center;
+}
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: var(--background-gray);
 }
 
 .hero h1 {
@@ -117,12 +158,10 @@ h2 {
 
 .hero a {
   display: inline-block;
-  margin-bottom: 200px;
   color: var(--third-text-color);
   background-color: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
-  padding: 15px 32px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
@@ -136,27 +175,45 @@ h2 {
   background-color: var(--third-text-color);
 }
 
-.advantage-list {
-  font-size: 0;
+.advantages .section {
+  padding-bottom: 0;
 }
-.advantage-list li {
-  display: inline-block;
+
+.advantages .card {
   width: calc((100% - 30px * 3) * 0.25);
 }
 
-.advantage-list li:not(:first-child) {
-  margin-left: 29.5px;
+.advantages .card:not(:last-child) {
+  margin-right: 30px;
 }
-.advantages p {
-  font-size: 14px;
-  line-height: 1.71;
-}
-.advantages h3 {
+
+.advantage-title {
+  margin-top: 0;
+  margin-bottom: 10;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+
+.advantage-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.working-title {
+  margin-bottom: 50px;
+}
+
+.working .card {
+  width: calc((100% - 30px * 2) * 4 / 12);
+}
+
+.working .card:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Наша команда */
@@ -167,19 +224,38 @@ h2 {
   text-align: center;
 }
 
-.team h3 {
+.team-header {
+  margin-bottom: 50px;
+}
+
+.teammate-name {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 500;
   color: var(--secondary-text-color);
 }
 
-.team li {
-  width: 270px;
-  height: 368px;
+.teammate-position {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.team .card-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team .card {
+  width: calc((100% - 3 * 30) / 4);
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team .card:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Футер */
@@ -187,22 +263,54 @@ h2 {
   background-color: var(--background-gray);
 }
 
+.footer .logo {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .address {
-  font-style: normal;
+  padding-top: 60px;
+  padding-bottom: 60px;
   font-size: 14px;
-  line-height: 1.71;
+  font-style: normal;
+  width: calc((100% - 30px * 3) / 3);
   color: var(--third-text-color);
 }
-.contact {
+
+.address .link.mail {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.contact.link {
+  font-weight: 400;
+  line-height: 1.71;
   color: var(--address-color);
 }
 
+.footer .flexbox {
+  flex-direction: column;
+}
+
+/* Портфолио */
 .button {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 2.17;
+  line-height: 1.63;
+  padding: 6px;
+  margin-bottom: 49px;
   background-color: var(--light-gray);
+}
+
+.filter {
+  justify-content: center;
+}
+
+.filter-button:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button:hover,
@@ -211,7 +319,17 @@ h2 {
   background-color: var(--accent-text-color);
 }
 
-.projects h2 {
+.projects {
+  flex-wrap: wrap;
+}
+
+.projects .card {
+  width: calc((100% - 30px * 2) / 3);
+}
+
+.projects-title-name {
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -219,8 +337,24 @@ h2 {
   text-align: left;
 }
 
-.projects p {
+.projects-title-type {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
+}
+
+.projects .card-title {
+  border: 1px solid #eeeeee;
+  border-top: 0;
+  padding: 20px 24px;
+}
+
+.projects .card:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.projects .card:not(:nth-child(n + 7)) {
+  margin-bottom: 30px;
 }
