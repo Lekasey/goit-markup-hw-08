@@ -8,6 +8,7 @@
 /* 'we are doing' block color: #E5E5E5  */
 /* address color: rgba(255, 255, 255, 0.6); */
 /* hdr-line-color: #ECECEC */
+/* clients-color:#AFB1B8 */
 
 /* Базовые стили */
 :root {
@@ -20,6 +21,7 @@
   --we-are-doin-block-color: #e5e5e5;
   --address-color: rgba(255, 255, 255, 0.6);
   --hdr-line-color: #ececec;
+  --clients-color: #AFB1B8;
 }
 
 body {
@@ -66,6 +68,10 @@ h2 {
   padding-bottom: 94px;
 }
 
+.section-header  {
+  margin-bottom: 50px;
+}
+
 .flexbox {
   display: flex;
 }
@@ -108,11 +114,29 @@ h2 {
   margin-right: 50px;
 }
 
+.contacts-top .link .icon {
+  margin-right: 10px;
+  fill: var(--primary-text-color);
+  
+}
+
+.contacts-top .link .mail {
+  width: 16px;
+  height: 12px;
+}
+
+.contacts-top .link .tel {
+  width: 10px;
+  height: 16px;
+}
+
 .contacts-top {
   margin-left: auto;
 }
 
 .contacts-top .link {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -123,9 +147,11 @@ h2 {
   margin-right: 50px;
 }
 
+.contacts-top .link:hover .icon,
 .link:hover,
 .link:focus {
   color: var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
 
 .header-line {
@@ -142,7 +168,12 @@ h2 {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--background-gray);
+  background-color: #C4C4C4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain, 1600px;
+  text-align: center;
 }
 
 .hero h1 {
@@ -156,15 +187,17 @@ h2 {
   color: var(--third-text-color);
 }
 
-.hero a {
+.hero .link {
   display: inline-block;
-  color: var(--third-text-color);
-  background-color: var(--accent-text-color);
-  border: 1px solid var(--accent-text-color);
+  padding: 10px 32px;  
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  color: var(--third-text-color);
+  background-color: var(--accent-text-color);
+  border: 1px solid var(--accent-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -179,6 +212,19 @@ h2 {
   padding-bottom: 0;
 }
 
+.thumb {
+  display: flex;
+  justify-content: center;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--light-gray);
+}
+.thumb .icon  {
+ 
+  width: 70px;
+  height: 70px;
+}
 .advantages .card {
   width: calc((100% - 30px * 3) * 0.25);
 }
@@ -204,10 +250,6 @@ h2 {
   line-height: 1.71;
 }
 
-.working-title {
-  margin-bottom: 50px;
-}
-
 .working .card {
   width: calc((100% - 30px * 2) * 4 / 12);
 }
@@ -222,10 +264,6 @@ h2 {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-}
-
-.team-header {
-  margin-bottom: 50px;
 }
 
 .teammate-name {
@@ -258,6 +296,68 @@ h2 {
   margin-right: 30px;
 }
 
+/* Клиенты */
+
+.client-list .client-box+.client-box {
+  margin-left: 30px;
+}
+
+.client-box {
+  display: flex;
+  width: calc((100% - 30px * 5) / 6);
+  color: var(--clients-color);
+}
+
+.client-list .link {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  border: 1px solid #AFB1B8;
+border-radius: 4px;
+justify-content: center;
+align-items: center;
+color: var(--clients-color);
+}
+.client-list .link:hover .icon,
+.client-list .link:hover,
+.client-list .link:focus {
+     border-color: var(--accent-text-color);
+  fill: var(--accent-text-color);
+}
+.client-list .icon  {
+  fill: var(--clients-color);
+}
+.client-list .one {
+
+   width: 44px;
+  height: 49px;
+  }
+
+.client-list .two{
+  width: 40px;
+  height: 52px;
+ /* fill: inherit  */
+}
+
+.client-list .three {
+  width: 41px;
+ height: 43px;
+}
+
+.client-list .four {
+  width: 80px;
+ height: 42px;
+}
+
+.client-list .five {
+  width: 59px;
+ height: 47px;
+}
+
+.client-list .six {
+  width: 88px;
+ height: 45px;
+}
 /* Футер */
 .footer {
   background-color: var(--background-gray);
