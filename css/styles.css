@@ -165,8 +165,12 @@ h2 {
   text-align: center;
 }
 .hero {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-color: #c4c4c4;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -222,10 +226,12 @@ h2 {
   border-radius: 4px;
   background-color: var(--light-gray);
 }
+
 .thumb .icon {
   width: 70px;
   height: 70px;
 }
+
 .advantages .card {
   width: calc((100% - 30px * 3) * 0.25);
 }
