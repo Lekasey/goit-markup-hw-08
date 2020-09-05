@@ -21,7 +21,7 @@
   --we-are-doin-block-color: #e5e5e5;
   --address-color: rgba(255, 255, 255, 0.6);
   --hdr-line-color: #ececec;
-  --svg-color: #AFB1B8;
+  --svg-color: #afb1b8;
 }
 
 body {
@@ -68,7 +68,7 @@ h2 {
   padding-bottom: 94px;
 }
 
-.section-header  {
+.section-header {
   margin-bottom: 50px;
 }
 
@@ -117,7 +117,6 @@ h2 {
 .contacts-top .link .icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
-  
 }
 
 .contacts-top .link .mail {
@@ -168,8 +167,11 @@ h2 {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: #C4C4C4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../image/bg/hero-bg.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../image/bg/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain, 1600px;
@@ -189,7 +191,7 @@ h2 {
 
 .hero .link {
   display: inline-block;
-  padding: 10px 32px;  
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -220,8 +222,7 @@ h2 {
   border-radius: 4px;
   background-color: var(--light-gray);
 }
-.thumb .icon  {
- 
+.thumb .icon {
   width: 70px;
   height: 70px;
 }
@@ -301,16 +302,16 @@ h2 {
 }
 .social-icons {
   justify-content: center;
-align-items: center;
+  align-items: center;
 }
 .social-icons .social-link {
   justify-content: center;
-align-items: center;
+  align-items: center;
   display: flex;
   width: 44px;
   height: 44px;
   border: 1px solid transparent;
-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .social-icon {
@@ -322,12 +323,12 @@ border-radius: 50%;
 .social-icons .social-link:focus .social-icon,
 .social-icons .social-link:hover,
 .social-icons .social-link:focus {
-     background-color: var(--accent-text-color);
+  background-color: var(--accent-text-color);
   fill: var(--third-text-color);
 }
 /* Клиенты */
 
-.client-list .client-box+.client-box {
+.client-list .client-box + .client-box {
   margin-left: 30px;
 }
 
@@ -341,55 +342,58 @@ border-radius: 50%;
   display: flex;
   width: 100%;
   height: 90px;
-  border: 1px solid #AFB1B8;
-border-radius: 4px;
-justify-content: center;
-align-items: center;
-color: var(--svg-color);
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: var(--svg-color);
 }
 .client-list .link:hover .icon,
 .client-list .link:focus .icon,
 .client-list .link:hover,
 .client-list .link:focus {
-     border-color: var(--accent-text-color);
+  border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
-.client-list .icon  {
+.client-list .icon {
   fill: var(--svg-color);
 }
 .client-list .one {
-
-   width: 44px;
+  width: 44px;
   height: 49px;
-  }
+}
 
-.client-list .two{
+.client-list .two {
   width: 40px;
   height: 52px;
- }
+}
 
 .client-list .three {
   width: 41px;
- height: 43px;
+  height: 43px;
 }
 
 .client-list .four {
   width: 80px;
- height: 42px;
+  height: 42px;
 }
 
 .client-list .five {
   width: 59px;
- height: 47px;
+  height: 47px;
 }
 
 .client-list .six {
   width: 88px;
- height: 45px;
+  height: 45px;
 }
 /* Футер */
 .footer {
   background-color: var(--background-gray);
+}
+
+.footer .container {
+  padding: 60px 15px;
 }
 
 .footer .logo {
@@ -400,8 +404,6 @@ color: var(--svg-color);
 }
 
 .address {
-  padding-top: 60px;
-  padding-bottom: 60px;
   font-size: 14px;
   font-style: normal;
   width: calc((100% - 30px * 3) / 4);
@@ -428,8 +430,8 @@ color: var(--svg-color);
 }
 
 .join {
+  padding-top: 12px;
   margin-left: 30px;
-  padding-top: 72px;
   width: calc((100% - 30px * 3) / 4);
   text-transform: uppercase;
   color: var(--third-text-color);
@@ -440,10 +442,10 @@ color: var(--svg-color);
 .footer .social-icons {
   justify-content: start;
   margin-top: 20px;
-  }
-  .footer .social-link {
-    background-color: rgba(255,255,255,0.1);
-  }
+}
+.footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 /* Портфолио */
 
 .button {
@@ -472,7 +474,8 @@ color: var(--svg-color);
 
 .button:hover,
 .button:focus {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   color: var(--third-text-color);
   background-color: var(--accent-text-color);
 }
@@ -520,5 +523,6 @@ color: var(--svg-color);
 
 .projects .card:hover,
 .projects .card:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
