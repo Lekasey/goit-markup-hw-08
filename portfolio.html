@@ -18,7 +18,7 @@
     <!-- Шапка сайта -->
     <header>
       <div class="container flexbox header">
-        <a href="./index.html" class="link logo"><span>Web</span>Studio</a>
+        <a href="./index.html" class="logo"><span>Web</span>Studio</a>
         <nav class="site-nav">
           <ul class="list flexbox site-nav-list">
             <li><a href="./index.html" class="link">Студия</a></li>
@@ -31,8 +31,7 @@
 
         <ul class="list flexbox contacts-top">
           <li class="contact">
-            <a href="mailto:info@devstudio.com" class="link"
-              >
+            <a href="mailto:info@devstudio.com" class="link">
               <svg class="icon mail">
                 <use href="./image/symbol-defs.svg#icon-mail"></use>
               </svg>
@@ -42,8 +41,9 @@
           <li class="contact">
             <a href="tel:+38096111111111" class="link">
               <svg class="icon tel">
-                <use href="./image/symbol-defs.svg#icon-tel"></use>
-              </svg>+38 096 111 11 11</a>
+                <use href="./image/symbol-defs.svg#icon-tel"></use></svg
+              >+38 096 111 11 11</a
+            >
           </li>
         </ul>
       </div>
@@ -77,11 +77,18 @@
           <ul class="list flexbox projects">
             <li class="card">
               <a href="" class="link">
-                <img
-                  src="./image/portfolio/technokryak.jpg"
-                  alt="Открытый МакБук, на экране какой-то Веб-сайт"
-                  width="370"
-                />
+                <div class="overlay">
+                  <img
+                    src="./image/portfolio/technokryak.jpg"
+                    alt="Открытый МакБук, на экране какой-то Веб-сайт"
+                    width="370"
+                  />
+                  <p class="card-overlay">
+                    Технокряк это современная площадка распространения
+                    коронавируса. Компании используют эту платформу для
+                    цифрового шпионажа и атак на защищённые сервера конкурентов.
+                  </p>
+                </div>
                 <div class="card-title">
                   <h2 class="projects-title-name">Технокряк</h2>
                   <p class="projects-title-type">Веб-сайт</p>
@@ -211,9 +218,7 @@
           <a class="contact link mail" href="mailto:info@example.com"
             >info@example.com</a
           >
-          <a class="contact link" href="tel:+380991111111"
-            >+38 099 111 11 11</a
-          >
+          <a class="contact link" href="tel:+380991111111">+38 099 111 11 11</a>
         </address>
         <div class="join">
           <b class="join-title">присоединяйтесь</b>
@@ -249,7 +254,6 @@
           </ul>
         </div>
       </div>
-     
     </footer>
   </body>
 </html>

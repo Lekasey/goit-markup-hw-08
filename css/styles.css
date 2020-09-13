@@ -22,6 +22,8 @@
   --address-color: rgba(255, 255, 255, 0.6);
   --hdr-line-color: #ececec;
   --svg-color: #afb1b8;
+  --time: 250ms;
+  --time-fuction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -83,14 +85,16 @@ h2 {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   text-decoration-line: none;
+  transition: color var(--time) var(--time-fuction);
 }
+
 /* Шапка сайта */
 .header {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 80px;
   align-items: center;
 }
 .logo {
+  text-decoration: none;
   margin-right: 93px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -106,8 +110,27 @@ h2 {
   color: var(--third-text-color);
 }
 
-.site-nav .current {
+.site-nav-list .current {
   color: var(--accent-text-color);
+  position: relative;
+}
+
+.site-nav-list .link {
+  display: block;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav-list .current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-text-color);
+  bottom: -1px;
+  left: 0;
 }
 
 .site-nav-list li {
@@ -193,7 +216,7 @@ h2 {
   color: var(--third-text-color);
 }
 
-.hero .link {
+.hero .button {
   display: inline-block;
   padding: 10px 32px;
   font-weight: 700;
@@ -208,6 +231,24 @@ h2 {
   border-radius: 4px;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.1);
+}
 /* Преимущества и Чем занимаемся*/
 .advantages,
 .working {
@@ -265,6 +306,27 @@ h2 {
   margin-right: 30px;
 }
 
+.working .card-thumb {
+  position: relative;
+}
+
+.card-thumb .link {
+  margin: 0;
+  padding: 27px 82px;
+  display: block;
+  width: 100%;
+  height: 70px;
+
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--third-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+
+  position: absolute;
+  bottom: 0;
+}
 /* Наша команда */
 .team {
   background-color: var(--light-gray);
@@ -318,18 +380,21 @@ h2 {
   height: 44px;
   border: 1px solid transparent;
   border-radius: 50%;
+  background-color: var(--third-text-color);
+  transition: background-color var(--time) var(--time-fuction);
 }
 
 .social-icon {
-  width: 20px;
-  height: 20px;
   fill: var(--svg-color);
 }
-.social-icons .social-link:hover .social-icon,
-.social-icons .social-link:focus .social-icon,
+
 .social-icons .social-link:hover,
 .social-icons .social-link:focus {
   background-color: var(--accent-text-color);
+}
+
+.social-icons .social-link:hover .social-icon,
+.social-icons .social-link:focus .social-icon {
   fill: var(--third-text-color);
 }
 /* Клиенты */
@@ -353,6 +418,7 @@ h2 {
   justify-content: center;
   align-items: center;
   color: var(--svg-color);
+  transition: border-color var(--time) var(--time-fuction);
 }
 .client-list .link:hover .icon,
 .client-list .link:focus .icon,
@@ -363,6 +429,7 @@ h2 {
 }
 .client-list .icon {
   fill: var(--svg-color);
+  transition: fill var(--time) var(--time-fuction);
 }
 .client-list .one {
   width: 44px;
@@ -468,6 +535,8 @@ h2 {
   color: var(--secondary-text-color);
   background-color: var(--light-gray);
   border-color: transparent;
+  transition: color var(--time) var(--time-fuction),
+    background-color var(--time) var(--time-fuction);
 }
 
 .filter {
@@ -531,4 +600,11 @@ h2 {
 .projects .card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.overlay {
+  position: relative;
+}
+
+.card-overlay {
 }
