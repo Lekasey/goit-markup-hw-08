@@ -57,11 +57,25 @@
       <div class="hero">
         <div class="hero-front">
           <h1>Эффективные решения для вашего бизнеса</h1>
-          <button class="button">Заказать услугу</button>
-          <div class="backdrop"></div>
+          <button class="button" data-modal-open>Заказать услугу</button>
         </div>
       </div>
-
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="exit-modal" data-modal-close>
+            <svg
+              class="exit-icon"
+              width="11"
+              height="11"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 1.108L9.892 0 5.5 4.392 1.108 0 0 1.108 4.392 5.5 0 9.892 1.108 11 5.5 6.608 9.892 11 11 9.892 6.608 5.5 11 1.108z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
       <!-- Преимущества -->
       <section class="advantages">
         <div class="container section">
@@ -453,5 +467,6 @@
         </div>
       </footer>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

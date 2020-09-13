@@ -159,6 +159,7 @@ h2 {
 .contacts-top .link {
   display: flex;
   align-items: center;
+  padding: 32px 0;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -188,9 +189,11 @@ h2 {
   text-align: center;
 }
 .hero {
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: #c4c4c4;
@@ -219,6 +222,7 @@ h2 {
 .hero .button {
   display: inline-block;
   padding: 10px 32px;
+  margin: 0;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -233,22 +237,55 @@ h2 {
 
 .backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.2);
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
+
 .modal {
   position: absolute;
+  width: 528px;
+  height: 581px;
+  background: var(--third-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
 }
+
+.exit-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--third-text-color);
+  border-radius: 100%;
+  transition: background-color var(--time) var(--time-fuction);
+}
+
+.exit-modal:hover {
+  background-color: var(--accent-text-color);
+}
+
+.exit-icon {
+  fill: #000000;
+}
+
+.exit-modal:hover .exit-icon {
+  fill: var(--third-text-color);
+}
+
 /* Преимущества и Чем занимаемся*/
 .advantages,
 .working {
@@ -604,7 +641,4 @@ h2 {
 
 .overlay {
   position: relative;
-}
-
-.card-overlay {
 }
