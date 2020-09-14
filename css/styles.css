@@ -250,6 +250,7 @@ h2 {
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity var(--time) var(--time-fuction);
+  z-index: 2;
 }
 
 .backdrop.is-hidden {
