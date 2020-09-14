@@ -278,16 +278,12 @@ h2 {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--third-text-color);
   border-radius: 100%;
   transition: background-color var(--time) var(--time-fuction);
-}
-
-.exit-modal:hover {
-  background-color: var(--accent-text-color);
 }
 
 .exit-icon {
@@ -295,7 +291,7 @@ h2 {
 }
 
 .exit-modal:hover .exit-icon {
-  fill: var(--third-text-color);
+  fill: var(--accent-text-color);
 }
 
 /* Преимущества и Чем занимаемся*/
