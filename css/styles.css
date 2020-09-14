@@ -241,6 +241,7 @@ h2 {
 .hero .button:hover {
   background-color: #188ce8;
 }
+
 .backdrop {
   position: fixed;
   width: 100%;
@@ -257,20 +258,20 @@ h2 {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, 0%) scale(1.1);
 }
 
 .modal {
   position: absolute;
+  top: 10%;
+  left: 50%;
   width: 528px;
   height: 581px;
   background: var(--third-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, 0) scale(1);
   transition: transform var(--time) var(--time-fuction);
 }
 
@@ -278,8 +279,8 @@ h2 {
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
+  width: 31px;
+  height: 31px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--third-text-color);
   border-radius: 100%;
@@ -413,10 +414,12 @@ h2 {
 .social-icon-item + .social-icon-item {
   margin-left: 10px;
 }
+
 .social-icons {
   justify-content: center;
   align-items: center;
 }
+
 .social-icons .social-link {
   justify-content: center;
   align-items: center;
@@ -465,6 +468,7 @@ h2 {
   color: var(--svg-color);
   transition: border-color var(--time) var(--time-fuction);
 }
+
 .client-list .link:hover .icon,
 .client-list .link:focus .icon,
 .client-list .link:hover,
@@ -472,10 +476,12 @@ h2 {
   border-color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
+
 .client-list .icon {
   fill: var(--svg-color);
   transition: fill var(--time) var(--time-fuction);
 }
+
 .client-list .one {
   width: 44px;
   height: 49px;
@@ -543,6 +549,7 @@ h2 {
 .contact.link:focus {
   color: var(--accent-text-color);
 }
+
 .address.flexbox {
   flex-direction: column;
 }
@@ -561,6 +568,7 @@ h2 {
   justify-content: start;
   margin-top: 20px;
 }
+
 .footer .social-link {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -651,6 +659,7 @@ h2 {
 .projects .card:focus .card-overlay {
   transform: translateY(0);
 }
+
 .overlay {
   position: relative;
   overflow: hidden;
