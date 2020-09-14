@@ -140,6 +140,7 @@ h2 {
 .contacts-top .link .icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
+  transition: fill var(--time) var(--time-fuction);
 }
 
 .contacts-top .link .mail {
