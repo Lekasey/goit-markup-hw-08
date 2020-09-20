@@ -51,7 +51,7 @@
     </header>
     <!-- Основной контент -->
     <main>
-      <h1 hidden>Проэкты студии</h1>
+      <h1 class="visually-hidden">Проэкты студии</h1>
       <section>
         <!-- Сортировка -->
         <div class="container section">
@@ -265,7 +265,7 @@
           </ul>
         </div>
       </section>
-    </main>
+    
     <!-- Футер -->
     <footer class="footer">
       <div class="container flexbox">
@@ -277,7 +277,9 @@
           <a class="contact link mail" href="mailto:info@example.com"
             >info@example.com</a
           >
-          <a class="contact link" href="tel:+380991111111">+38 099 111 11 11</a>
+          <a class="contact link" href="tel:+380991111111"
+            >+38 099 111 11 11</a
+          >
         </address>
         <div class="join">
           <b class="join-title">присоединяйтесь</b>
@@ -312,7 +314,20 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe">
+                        <b class="subscribe-title">Подпишитесь на рассылку</b> 
+         
+          <form class="flexbox subscribe-form">
+           
+            <input type="email" name="subscribe" class="subscribe-input" placeholder="E-mail">
+            <button class="button flexbox" type="submit"><span>Подписаться</span><svg class="subscribe-icon" width="24" height="24">
+              
+              <use href="./image/symbol-defs.svg#subscribe"></use>
+            </svg> </button>
+          </form>
+        </div>
       </div>
     </footer>
-  </body>
+  </main>
+    </body>
 </html>

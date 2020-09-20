@@ -98,13 +98,13 @@ input {
   position: absolute;
   width: 1px;
   height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   margin: -1px;
-  opacity: 0;
+  border: 0;
+  padding: 0;
 }
 
-a, button, input, textarea {
-  outline: none;
-}
 
 /* Шапка сайта */
 .header {
@@ -339,7 +339,6 @@ a, button, input, textarea {
 .modal .input {
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
   padding: 12px 42px;
   border-radius: 4px;
   border: 1px solid rgba(33,33,33,0.2);
@@ -347,21 +346,44 @@ a, button, input, textarea {
   transition: border-color var(--time) var(--time-fuction);
 }
 
-.modal .input:focus,
-.modal .input:hover,
-.modal .input:active {
-  border-color: var(--accent-text-color);
+.checkbox-input {
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 24px;
+  padding-right: 11px;
+  padding-left: 11px;
+
 }
 
+.checkbox {
+  position: absolute;
+  top: 50%;
+  /* margin-right: 7px; */
+  width: 16px;
+  height: 15px;
+  background-color: var(--third-text-color);
+  background-image: url(../image/svg/empty.svg);
+  transform: translateY(-50%);
+  transition: box-shadow var(--time) var(--time-fuction), background-image var(--time) var(--time-fuction);
+}
+
+.check:checked + .checkbox {
+  background-image: url(../image/svg/mark.svg), url(../image/svg/mark-field.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
 .licence {
-  display: inline-block;
+  /* display: block; */
+  align-items: center;
   height: 24px;
   font-size: 14px;
   line-height: 1.71;
-  margin-bottom: 30px;
+  margin-left: 26px ;
 }
 .modal .button {
-  margin: 0 auto;
+  margin: 30px auto auto;
   padding: 10px 55px;
   font: normal 700 16px/1.87 "Roboto", sans-serif;
   letter-spacing: 0.06em;
@@ -390,6 +412,36 @@ a, button, input, textarea {
 .modal .button:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: #188CE8;
+}
+
+.form-input-item {
+  margin-bottom: 10px;
+}
+.form-input-field {
+  position: relative;
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  fill: var(--secondary-text-color);
+  transform: translateY(-50%);
+  transition: fill var(--time) var(--time-fuction);
+}
+.modal .input:hover,
+.modal .input:hover + .form-icon {
+  border-color: var(--accent-text-color);
+  }
+
+.modal .input:focus,
+.modal .input:active,
+.modal .input:focus + .form-icon,
+.modal .input:active + .form-icon {
+  outline: none;
+  border-color: var(--accent-text-color);
+  fill: var(--accent-text-color);
 }
 
 /* Преимущества и Чем занимаемся*/
