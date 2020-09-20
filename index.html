@@ -466,7 +466,7 @@
     </main>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="exit-modal" data-modal-close>
+                <button class="exit-modal" data-modal-close>
           <svg
             class="exit-icon"
             width="11"
@@ -478,8 +478,33 @@
             />
           </svg>
         </button>
+        <form class="js-speaker-form" autocomplete="on">
+          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <label class="label" for="name">Имя</label>
+          <input class="input" type="text" name="name" id="name" required>
+          <label class="label" for="tel">Телефон</label>
+          <input class="input" type="tel" name="tel" id="tel" required>
+          <label class="label" for="email">Почта</label>
+          <input class="input" type="email" name="email" id="email" required>
+          <label class="label" for="comment">Комментарий</label>
+          <textarea class="input comment" name="comment" id="comment" rows="7" placeholder="Введите текст"></textarea>
+          <input class="visually-hidden" type="checkbox" name="licence" id="licence" checked required>
+          <label class="licence" for="licence">Соглашаюсь с рассылкой и принимаю <a href="" class="link licence">Условия договора</a> </label>
+          <button class="button" type="submit">Отправить</button></form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script>(() => {
+      document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+          );
+        });
+      })();
+    </script>
   </body>
 </html>

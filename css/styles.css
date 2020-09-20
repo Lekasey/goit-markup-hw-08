@@ -85,7 +85,25 @@ h2 {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   text-decoration-line: none;
+  outline: none;
   transition: color var(--time) var(--time-fuction);
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  opacity: 0;
+}
+
+a, button, input, textarea {
+  outline: none;
 }
 
 /* Шапка сайта */
@@ -172,6 +190,7 @@ h2 {
 }
 
 .contacts-top .link:hover .icon,
+.contacts-top .link:focus .icon,
 .link:hover,
 .link:focus {
   color: var(--accent-text-color);
@@ -236,9 +255,10 @@ h2 {
   border-radius: 4px;
   transition: background-color var(--time) var(--time-fuction);
   cursor: pointer;
-}
+  }
 
-.hero .button:hover {
+.hero .button:hover,
+.hero .button:focus {
   background-color: #188ce8;
 }
 
@@ -264,10 +284,11 @@ h2 {
 
 .modal {
   position: absolute;
+  padding: 40px;
   top: 10%;
   left: 50%;
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
   background: var(--third-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -292,8 +313,83 @@ h2 {
   fill: #000000;
 }
 
-.exit-modal:hover .exit-icon {
+.exit-modal:hover .exit-icon,
+.exit-modal:focus .exit-icon {
   fill: var(--accent-text-color);
+}
+
+.form-title {
+  font: normal 700 20px/1.17 "Roboto", sans-serif;
+  margin-bottom: 12px;
+}
+
+.modal .link {
+  font: normal 400 14px/1.71 "Roboto", sans-serif;
+  color: var(--accent-text-color);
+  text-decoration: underline;
+}
+
+.modal .label {
+  display: block;
+  font: normal 400 12px/1.16 "Roboto", sans-serif;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+  }
+
+.modal .input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 12px 42px;
+  border-radius: 4px;
+  border: 1px solid rgba(33,33,33,0.2);
+  cursor: pointer;
+  transition: border-color var(--time) var(--time-fuction);
+}
+
+.modal .input:focus,
+.modal .input:hover,
+.modal .input:active {
+  border-color: var(--accent-text-color);
+}
+
+.licence {
+  display: inline-block;
+  height: 24px;
+  font-size: 14px;
+  line-height: 1.71;
+  margin-bottom: 30px;
+}
+.modal .button {
+  margin: 0 auto;
+  padding: 10px 55px;
+  font: normal 700 16px/1.87 "Roboto", sans-serif;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-text-color);
+  color: var(--third-text-color);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--time) var(--time-fuction);
+  cursor: pointer;
+}
+
+.input.comment  {
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  resize: none;
+  }
+
+.input.comment::placeholder {
+  font: normal 400 14px/1.17 "Roboto", sans-serif;
+  color: rgba(117,117,117,0,5);
+}
+
+
+.modal .button:hover,
+.modal .button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: #188CE8;
 }
 
 /* Преимущества и Чем занимаемся*/
