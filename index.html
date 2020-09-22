@@ -18,38 +18,52 @@
     <!-- Шапка сайта -->
     <header>
       <div class="container flexbox header">
-        <a href="./index.html" class="logo"><span>Web</span>Studio</a>
-        <nav class="site-nav">
-          <ul class="list flexbox site-nav-list">
-            <li>
-              <a href="./index.html" class="link current">Студия</a>
+        <a href="./index.html" class="logo"
+          >Web<span class="header__logo">Studio</span></a
+        >
+        <nav class="header__nav">
+          <ul class="list flexbox header__nav-list">
+            <li class="header__item">
+              <a
+                href="./index.html"
+                class="link header__link header__link--current"
+                >Студия</a
+              >
             </li>
-            <li>
-              <a href="./portfolio.html" class="link">Портфолио</a>
+            <li class="header__item">
+              <a href="./portfolio.html" class="link header__link">Портфолио</a>
             </li>
-            <li><a href="" class="link">Контакты</a></li>
+            <li class="header__item">
+              <a href="" class="link header__link">Контакты</a>
+            </li>
           </ul>
         </nav>
 
-        <ul class="list flexbox contacts-top">
-          <li class="contact">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="icon mail">
+        <ul class="list flexbox header__contacts contacts-top">
+          <li class="header__item">
+            <a
+              href="mailto:info@devstudio.com"
+              class="link header__link header__link--gray"
+            >
+              <svg class="header__icon header__icon--mail">
                 <use href="./image/symbol-defs.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="contact">
-            <a href="tel:+38096111111111" class="link">
-              <svg class="icon tel">
+          <li class="header__item">
+            <a
+              href="tel:+38096111111111"
+              class="link header__link header__link--gray"
+            >
+              <svg class="header__icon header__icon--tel">
                 <use href="./image/symbol-defs.svg#icon-tel"></use></svg
               >+38 096 111 11 11</a
             >
           </li>
         </ul>
       </div>
-      <span class="header-line flexbox"></span>
+      <span class="header__underline flexbox"></span>
     </header>
     <!-- Уникальный контент -->
     <main>
@@ -406,7 +420,7 @@
         <div class="container flexbox">
           <address class="address flexbox">
             <a href="./index.html" class="link logo"
-              ><span>Web</span><span class="logo-white">Studio</span></a
+              >Web<span class="footer__logo">Studio</span></a
             >
             г. Киев, пр-т Леси Украинки, 26
             <a class="contact link mail" href="mailto:info@example.com"

@@ -85,7 +85,7 @@ h2 {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   text-decoration-line: none;
-  outline: none;
+  outline: transparent;
   transition: color var(--time) var(--time-fuction);
 }
 
@@ -117,29 +117,36 @@ input {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  color: var(--secondary-text-color);
-}
-
-.logo > span {
   color: var(--accent-text-color);
 }
-.logo .logo-white {
+
+.header__logo {
+  color: var(--secondary-text-color);
+}
+.footer__logo {
   color: var(--third-text-color);
 }
 
-.site-nav-list .current {
+.header__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 32px 0;
+}
+
+.header__link--gray {
+  color: var(--primary-text-color);
+}
+
+.header__link--current {
   color: var(--accent-text-color);
-  position: relative;
 }
 
-.site-nav-list .link {
-  display: block;
-  position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.site-nav-list .current::after {
+.header__link--current::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -150,53 +157,35 @@ input {
   left: 0;
 }
 
-.site-nav-list li {
-  margin-right: 50px;
+.header__contacts {
+  margin-left: auto;
 }
 
-.contacts-top .link .icon {
+.header__icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
   transition: fill var(--time) var(--time-fuction);
 }
 
-.contacts-top .link .mail {
+.header__icon--mail {
   width: 16px;
   height: 12px;
 }
 
-.contacts-top .link .tel {
+.header__icon--tel {
   width: 10px;
   height: 16px;
 }
 
-.contacts-top {
-  margin-left: auto;
-}
-
-.contacts-top .link {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-}
-
-.contacts-top .contact:not(:last-child) {
-  margin-right: 50px;
-}
-
-.contacts-top .link:hover .icon,
-.contacts-top .link:focus .icon,
+.header__link:hover .header__icon,
+.header__link:focus .header__icon,
 .link:hover,
 .link:focus {
   color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
 
-.header-line {
+.header__underline {
   border-bottom: 1px solid var(--hdr-line-color);
   flex-grow: 1;
 }
