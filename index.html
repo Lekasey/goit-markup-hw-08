@@ -69,64 +69,66 @@
     <main>
       <!-- Герой -->
       <div class="hero">
-        <div class="hero-front">
-          <h1>Эффективные решения для вашего бизнеса</h1>
-          <button class="button" data-modal-open>Заказать услугу</button>
+        <div class="hero__front">
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <button class="button hero__button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </div>
 
       <!-- Преимущества -->
       <section class="advantages">
-        <div class="container section">
+        <div class="container section advantages__section">
           <h2 class="visually-hidden">Преимущества</h2>
-          <ul class="list flexbox advantage-list">
-            <li class="card">
-              <div class="thumb">
-                <svg class="icon">
+          <ul class="list flexbox advantages__list">
+            <li class="advantages__card">
+              <div class="advantages__thumb">
+                <svg class="advantages__icon">
                   <use href="./image/symbol-defs.svg#icon-radar"></use>
                 </svg>
               </div>
-              <h3 class="advantage-title">Внимание к деталям</h3>
-              <p class="advantage-text">
+              <h3 class="advantages__title">Внимание к деталям</h3>
+              <p class="advantages__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
 
-            <li class="card">
-              <div class="thumb">
-                <svg class="icon">
+            <li class="advantages__card">
+              <div class="advantages__thumb">
+                <svg class="advantages__icon">
                   <use href="./image/symbol-defs.svg#icon-clock"></use>
                 </svg>
               </div>
-              <h3 class="advantage-title">Пунктуальность</h3>
-              <p class="advantage-text">
+              <h3 class="advantages__title">Пунктуальность</h3>
+              <p class="advantages__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
 
-            <li class="card">
-              <div class="thumb">
-                <svg class="icon">
+            <li class="advantages__card">
+              <div class="advantages__thumb">
+                <svg class="advantages__icon">
                   <use href="./image/symbol-defs.svg#icon-diagram"></use>
                 </svg>
               </div>
-              <h3 class="advantage-title">Планирование</h3>
-              <p class="advantage-text">
+              <h3 class="advantages__title">Планирование</h3>
+              <p class="advantages__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
 
-            <li class="card">
-              <div class="thumb">
-                <svg class="icon">
+            <li class="advantages__card">
+              <div class="advantages__thumb">
+                <svg class="advantages__icon">
                   <use href="./image/symbol-defs.svg#icon-astronaut"></use>
                 </svg>
               </div>
-              <h3 class="advantage-title">Современные технологии</h3>
-              <p class="advantage-text">
+              <h3 class="advantages__title">Современные технологии</h3>
+              <p class="advantages__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -138,7 +140,7 @@
       <!-- Чем мы занимаемся -->
       <section class="working">
         <div class="container section">
-          <h2 class="section-header">Чем мы занимаемся</h2>
+          <h2 class="title section__title">Чем мы занимаемся</h2>
           <ul class="list flexbox working-at">
             <li class="card">
               <div class="card-thumb">
@@ -176,7 +178,7 @@
       <!-- Наша команда -->
       <section class="team">
         <div class="container section">
-          <h2 class="section-header">Наша команда</h2>
+          <h2 class="title section__title">Наша команда</h2>
           <ul class="list flexbox team-list">
             <li class="card">
               <img
@@ -356,7 +358,7 @@
       <!-- Клиенты -->
       <section class="clients">
         <div class="section container">
-          <h2 class="section-header">Постоянные клиенты</h2>
+          <h2 class="title section__title">Постоянные клиенты</h2>
           <ul class="list flexbox client-list">
             <li class="client-box">
               <a class="link" href=""
@@ -498,8 +500,8 @@
             />
           </svg>
         </button>
-        <form class="js-speaker-form" autocomplete="on">
-          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="js-speaker-form form" autocomplete="on">
+          <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
           <ul class="list form-input">
             <li class="form-input-item">
               <label class="label" for="name">Имя</label>
