@@ -18,8 +18,8 @@
     <!-- Шапка сайта -->
     <header>
       <div class="container flexbox header">
-        <a href="./index.html" class="logo"
-          >Web<span class="header__logo">Studio</span></a
+        <a href="./index.html" class="logo header__logo"
+          >Web<span class="logo--black">Studio</span></a
         >
         <nav class="header__nav">
           <ul class="list flexbox header__nav-list">
@@ -292,65 +292,70 @@
 
       <!-- Футер -->
       <footer class="footer">
-        <div class="container flexbox">
-          <address class="address flexbox">
-            <a href="./index.html" class="link logo"
-              ><span>Web</span><span class="logo-white">Studio</span></a
+        <div class="container flexbox footer__container">
+          <address class="address">
+            <a href="./index.html" class="link logo footer__logo"
+              >Web<span class="logo--white">Studio</span></a
             >
             г. Киев, пр-т Леси Украинки, 26
-            <a class="contact link mail" href="mailto:info@example.com"
+            <a
+              class="link address__link address__link--mail"
+              href="mailto:info@example.com"
               >info@example.com</a
             >
-            <a class="contact link" href="tel:+380991111111"
+            <a class="link address__link" href="tel:+380991111111"
               >+38 099 111 11 11</a
             >
           </address>
-          <div class="join">
-            <b class="join-title">присоединяйтесь</b>
-            <ul class="list flexbox social-icons">
-              <li class="social-icon-item">
-                <a href="" class="social-link">
-                  <svg class="social-icon" width="20" height="20">
+          <div class="footer__join">
+            <b class="footer__title">присоединяйтесь</b>
+            <ul class="list flexbox social--footer">
+              <li class="social__item">
+                <a href="" class="social__link social__link--footer">
+                  <svg class="social__icon" width="20" height="20">
                     <use href="./image/symbol-defs.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social-icon-item">
-                <a href="" class="social-link">
-                  <svg class="social-icon" width="20" height="20">
+              <li class="social__item">
+                <a href="" class="social__link social__link--footer">
+                  <svg class="social__icon" width="20" height="20">
                     <use href="./image/symbol-defs.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social-icon-item">
-                <a href="" class="social-link">
-                  <svg class="social-icon" width="20" height="20">
+              <li class="social__item">
+                <a href="" class="social__link social__link--footer">
+                  <svg class="social__icon" width="20" height="20">
                     <use href="./image/symbol-defs.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
-              <li class="social-icon-item">
-                <a href="" class="social-link">
-                  <svg class="social-icon" width="20" height="20">
+              <li class="social__item">
+                <a href="" class="social__link social__link--footer">
+                  <svg class="social__icon" width="20" height="20">
                     <use href="./image/symbol-defs.svg#icon-linkedin"></use>
                   </svg>
                 </a>
               </li>
             </ul>
           </div>
-          <div class="subscribe">
-            <b class="subscribe-title">Подпишитесь на рассылку</b>
+          <div class="footer__subscribe">
+            <b class="footer__title">Подпишитесь на рассылку</b>
 
             <form class="flexbox subscribe-form">
               <input
                 type="email"
                 name="subscribe"
-                class="subscribe-input"
+                class="subscribe-form__input"
                 placeholder="E-mail"
               />
-              <button class="button flexbox" type="submit">
+              <button
+                class="button flexbox subscribe-form__button"
+                type="submit"
+              >
                 <span>Подписаться</span
-                ><svg class="subscribe-icon" width="24" height="24">
+                ><svg class="subscribe-form__icon" width="24" height="24">
                   <use href="./image/symbol-defs.svg#subscribe"></use>
                 </svg>
               </button>
