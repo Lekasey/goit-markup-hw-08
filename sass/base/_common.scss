@@ -5,3 +5,58 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title {
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondary-text-color;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link {
+  font: normal 500 14px/1.14 "Roboto", sans-serif;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+  text-decoration-line: none;
+  outline: transparent;
+  transition: color $time $time-fuction;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}

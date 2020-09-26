@@ -1,0 +1,25 @@
+.logo {
+  text-decoration: none;
+  font: normal 700 26px/1.19 "Raleway", sans-serif;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.logo--white {
+  color: $white;
+}
+
+.logo--black {
+  color: $secondary-text-color;
+}
+
+.footer__logo {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}

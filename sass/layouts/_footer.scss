@@ -1,0 +1,22 @@
+.footer {
+  background-color: $bg-gray;
+}
+
+.footer__container {
+  padding: 60px 15px;
+}
+
+.footer__join {
+  padding-top: 12px;
+  margin-left: 30px;
+  width: calc((100% - 30px * 3) / 4);
+}
+
+.footer__title {
+  display: block;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,36 @@
+.footer__subscribe {
+  padding-top: 12px;
+  margin-left: 30px;
+  width: calc((100% - 30px) / 2);
+}
+
+.subscribe-form {
+  flex-wrap: nowrap;
+}
+.subscribe-form__input {
+  margin-right: 12px;
+  width: 358px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $white;
+}
+.subscribe-form__button {
+  margin: 0;
+  padding: 10px 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 3 + 30px);
+  background-color: $accent-color;
+  color: $white;
+  cursor: pointer;
+}
+
+.subscribe-form__icon {
+  margin-left: 10px;
+  fill: $white;
+}

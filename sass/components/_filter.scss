@@ -1,0 +1,7 @@
+.filter {
+  justify-content: center;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
