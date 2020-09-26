@@ -574,7 +574,7 @@ img {
   transition: background-color var(--time) var(--time-fuction);
 }
 
-.modal__exit--icon {
+.modal__icon {
   fill: #000000;
 }
 
