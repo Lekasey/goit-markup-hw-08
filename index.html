@@ -494,9 +494,9 @@
     </main>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="exit-modal" data-modal-close>
+        <button class="modal__exit" data-modal-close>
           <svg
-            class="exit-icon"
+            class="modal__icon"
             width="11"
             height="11"
             xmlns="http://www.w3.org/2000/svg"
@@ -507,73 +507,85 @@
           </svg>
         </button>
         <form class="js-speaker-form form" autocomplete="on">
-          <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
-          <ul class="list form-input">
-            <li class="form-input-item">
-              <label class="label" for="name">Имя</label>
-              <div class="form-input-field">
+          <h2 class="title form__title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <ul class="list form__list">
+            <li class="form__item">
+              <label class="form__label" for="name">Имя</label>
+              <div class="form__field">
                 <input
-                  class="input"
+                  class="form__input"
                   type="text"
                   name="name"
                   id="name"
                   required
                 />
-                <svg class="form-icon">
+                <svg class="form__icon">
                   <use href="./image/symbol-defs.svg#name-icon"></use>
                 </svg>
               </div>
             </li>
-            <li class="form-input-item">
-              <label class="label" for="tel">Телефон</label>
-              <div class="form-input-field">
-                <input class="input" type="tel" name="tel" id="tel" required />
-                <svg class="form-icon">
+            <li class="form__item">
+              <label class="form__label" for="tel">Телефон</label>
+              <div class="form__field">
+                <input
+                  class="form__input"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  required
+                />
+                <svg class="form__icon">
                   <use href="./image/symbol-defs.svg#phone-icon"></use>
                 </svg>
               </div>
             </li>
-            <li class="form-input-item">
-              <label class="label" for="email">Почта</label>
-              <div class="form-input-field">
+            <li class="form__item">
+              <label class="form__label" for="email">Почта</label>
+              <div class="form__field">
                 <input
-                  class="input"
+                  class="form__input"
                   type="email"
                   name="email"
                   id="email"
                   required
                 />
-                <svg class="form-icon">
+                <svg class="form__icon">
                   <use href="./image/symbol-defs.svg#email-icon"></use>
                 </svg>
               </div>
             </li>
           </ul>
-          <label class="label" for="comment">Комментарий</label>
+          <label class="form__label" for="comment">Комментарий</label>
           <textarea
-            class="input comment"
+            class="form__comment form__input"
             name="comment"
             id="comment"
             rows="7"
             placeholder="Введите текст"
           ></textarea>
-          <div class="checkbox-input">
-            <input
-              class="check visually-hidden"
-              type="checkbox"
-              name="licence"
-              id="licence"
-              checked
-              required
-            />
-            <span class="checkbox"></span>
-            <label class="licence" for="licence"
-              >Соглашаюсь с рассылкой и принимаю
-              <a href="" class="link">Условия договора</a>
+          <div class="checkbox">
+            <label class="form__licence" for="licence">
+              <input
+                class="checkbox__hidden visually-hidden"
+                type="checkbox"
+                name="licence"
+                id="licence"
+                checked
+                required
+              />
+              <span class="checkbox__custom"></span>
+              <span class="checkbox__text"
+                >Соглашаюсь с рассылкой и принимаю
+                <a href="" class="form__link--licence"
+                  >Условия договора</a
+                ></span
+              >
             </label>
           </div>
-          <button class="button" type="submit">
-            <a href="./" class="link">Отправить</a>
+          <button class="button form__button" type="submit">
+            <a href="./" class="link form__link">Отправить</a>
           </button>
         </form>
       </div>
