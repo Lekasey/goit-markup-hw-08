@@ -21,9 +21,9 @@ img {
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  max-width: 1200px;
 }
 
 .title {
@@ -170,14 +170,26 @@ img {
 }
 
 .logo {
+  display: inline-block;
+  padding: 16px 0;
   text-decoration: none;
-  font: normal 700 26px/1.19 "Raleway", sans-serif;
+  font: normal 700 24px/1.17 "Raleway", sans-serif;
   letter-spacing: 0.03em;
   color: #2196f3;
 }
 
-.header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .logo {
+    padding: 26px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    padding: 24px 0;
+  }
 }
 
 .logo--white {
@@ -188,8 +200,14 @@ img {
   color: #212121;
 }
 
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
+}
+
 .footer__logo {
-  display: inline-flex;
+  display: inline-block;
   padding: 0;
   margin: 0;
   margin-bottom: 20px;
@@ -267,19 +285,64 @@ img {
 }
 
 .header {
-  height: 80px;
+  position: relative;
   align-items: center;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
+
+.header__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 393px;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.header__button {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header__button.is-open .header__button--cross {
+  display: block;
+}
+
+.header__button.is-open .header__button--menu {
+  display: none;
+}
+
+.header__button--cross {
+  display: none;
 }
 
 .header__item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .header__link {
-  display: flex;
+  display: inline-block;
   align-items: center;
   position: relative;
-  padding: 32px 0;
 }
 
 .header__link--gray {
@@ -287,6 +350,7 @@ img {
 }
 
 .header__link--current {
+  padding-bottom: 8px;
   color: #2196f3;
 }
 
