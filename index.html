@@ -22,11 +22,12 @@
         <a href="./index.html" class="logo header__logo"
           >Web<span class="logo--black">Studio</span></a
         >
-        <button type="button" class="header__button is-open" data-menu-button>
+        <button type="button" class="header__button" data-menu-button>
           <svg
             width="40"
             height="40"
             aria-expanded="false"
+            aria-controls="header__menu"
             aria-label="Переключатель мобильного меню"
           >
             <use
@@ -40,29 +41,29 @@
           </svg>
         </button>
 
-        <div class="header__menu">
+        <div class="header__menu" id="header__menu" data-menu>
           <nav class="header__nav">
             <ul class="list header__nav-list">
-              <li class="header__item">
+              <li class="header__nav-item">
                 <a
                   href="./index.html"
                   class="link header__link header__link--current"
                   >Студия</a
                 >
               </li>
-              <li class="header__item">
+              <li class="header__nav-item">
                 <a href="./portfolio.html" class="link header__link"
                   >Портфолио</a
                 >
               </li>
-              <li class="header__item">
+              <li class="header__nav-item">
                 <a href="" class="link header__link">Контакты</a>
               </li>
             </ul>
           </nav>
 
-          <ul class="list header__contacts contacts-top">
-            <li class="header__item">
+          <ul class="list header__contacts">
+            <li class="header__contacts-item">
               <a
                 href="mailto:info@devstudio.com"
                 class="link header__link header__link--gray"
@@ -73,7 +74,7 @@
                 info@devstudio.com</a
               >
             </li>
-            <li class="header__item">
+            <li class="header__contacts-item">
               <a
                 href="tel:+38096111111111"
                 class="link header__link header__link--gray"

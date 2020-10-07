@@ -17,51 +17,72 @@
   <body>
     <!-- Шапка сайта -->
     <header>
-      <div class="container flexbox header">
+      <div class="container header">
         <a href="./index.html" class="logo header__logo"
           >Web<span class="logo--black">Studio</span></a
         >
-        <nav class="header__nav">
-          <ul class="list flexbox header__nav-list">
-            <li class="header__item">
-              <a href="./index.html" class="link header__link">Студия</a>
-            </li>
-            <li class="header__item">
+        <button type="button" class="header__button" data-menu-button>
+          <svg
+            width="40"
+            height="40"
+            aria-expanded="false"
+            aria-controls="header__menu"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="header__button--cross"
+              href="./image/sprite.svg#hdr-cross"
+            ></use>
+            <use
+              class="header__button--menu"
+              href="./image/sprite.svg#hdr-menu"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="header__menu" id="header__menu" data-menu>
+          <nav class="header__nav">
+            <ul class="list header__nav-list">
+              <li class="header__nav-item">
+                <a href="./index.html" class="link header__link">Студия</a>
+              </li>
+              <li class="header__nav-item">
+                <a
+                  href="./portfolio.html"
+                  class="link header__link header__link--current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a href="" class="link header__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="list header__contacts">
+            <li class="header__contacts-item">
               <a
-                href="./portfolio.html"
-                class="link header__link header__link--current"
-                >Портфолио</a
+                href="mailto:info@devstudio.com"
+                class="link header__link header__link--gray"
+              >
+                <svg class="header__icon header__icon--mail">
+                  <use href="./image/sprite.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="header__item">
-              <a href="" class="link header__link">Контакты</a>
+            <li class="header__contacts-item">
+              <a
+                href="tel:+38096111111111"
+                class="link header__link header__link--gray"
+              >
+                <svg class="header__icon header__icon--tel">
+                  <use href="./image/sprite.svg#icon-tel"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-
-        <ul class="list flexbox header__contacts contacts-top">
-          <li class="header__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="link header__link header__link--gray"
-            >
-              <svg class="header__icon header__icon--mail">
-                <use href="./image/symbol-defs.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header__item">
-            <a
-              href="tel:+38096111111111"
-              class="link header__link header__link--gray"
-            >
-              <svg class="header__icon header__icon--tel">
-                <use href="./image/symbol-defs.svg#icon-tel"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
       <span class="header__underline flexbox"></span>
     </header>
@@ -362,6 +383,7 @@
         </div>
       </footer>
     </main>
+    <script src="./js/menu.js"></script>
     <script>
       (() => {
         document
