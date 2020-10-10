@@ -7,16 +7,31 @@
 }
 
 .footer__join {
-  padding-top: 12px;
-  margin-left: 30px;
-  width: calc((100% - 30px * 3) / 4);
+  @include for-size (mobile-only) {
+    margin-bottom: 60px;
+  }
+
+  @include for-size (tablet) {
+    padding-top: 12px;
+    width: calc((100% - 30px) / 2);
+    margin-left: 30px;
+  }
+  @include for-size (desktop){
+    width: calc((100% - 30px * 3) / 4);
+  }
+ 
 }
 
 .footer__title {
+  
   display: block;
   text-transform: uppercase;
+  text-align: center;
   color: $white;
   font-size: 14px;
   line-height: 1.14;
   margin-bottom: 20px;
+  @include for-size (desktop){
+    text-align: left;
+  }
 }

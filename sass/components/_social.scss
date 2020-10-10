@@ -3,6 +3,7 @@
 }
 
 .social {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -34,7 +35,12 @@
 }
 
 .social--footer {
+  display: flex;
+  justify-content: center;
+  
+  @include for-size (desktop) {
   justify-content: start;
+  }
 }
 
 .social__link--footer {

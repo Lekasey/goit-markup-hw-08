@@ -20,6 +20,12 @@ img {
   padding-left: 0;
 }
 
+.flexbox {
+  @include for-size (tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -35,11 +41,15 @@ img {
 .title {
   margin-top: 0;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
+  @include for-size (desktop) {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .link {

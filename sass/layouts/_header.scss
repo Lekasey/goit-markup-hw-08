@@ -5,16 +5,18 @@
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  @media screen and (min-width: $mobile) {
-    max-width: 480px;
+
+  @include for-size (mobile) {
+    max-width: $mobile;
   }
-  @media screen and (min-width: $tablet) {
+
+  @include for-size (tablet) {
     height: 80px;
-    max-width: 768px;
+    max-width: $tablet;
     justify-content: center;
   }
-  @media screen and (min-width: $desktop) {
-    max-width: 1200px;
+  @include for-size (desktop) {
+    max-width: $desktop;
   }
   &__menu {
     @media screen and(max-width: 767px) {
@@ -37,19 +39,19 @@
         opacity: 1;
       }
     }
-    @media screen and (min-width: $tablet) {
+    @include for-size (tablet) {
       display: flex;
       flex-grow: 1;
       justify-content: space-between;
       margin-left: 88px;
     }
-    @media screen and (min-width: $desktop) {
+    @include for-size (desktop) {
       margin-left: 93px;
     }
   }
 
   &__nav-list {
-    @media screen and (min-width: $tablet) {
+    @include for-size (tablet) {
       display: flex;
     }
   }
@@ -80,7 +82,7 @@
   &:active &--menu {
     fill: $accent-color;
   }
-  @media screen and (min-width: $tablet) {
+  @include for-size (tablet) {
     display: none;
   }
 }
@@ -89,7 +91,7 @@
     @media screen and (max-width: 767px) {
       margin-bottom: 40px;
     }
-    @media screen and (min-width: $tablet) {
+    @include for-size (tablet) {
       margin-right: 50px;
     }
   }
@@ -119,7 +121,7 @@
     font-size: 18px;
     line-height: 1.17;
   }
-  @media screen and (min-width: $tablet) {
+  @include for-size (tablet) {
     display: flex;
     padding: 32px 0;
   }
@@ -150,7 +152,7 @@
       margin-top: 10px;
     }
   }
-  @media screen and (min-width: $desktop) {
+  @include for-size (desktop) {
     display: flex;
     &-item + &-item {
       margin-left: 30px;
