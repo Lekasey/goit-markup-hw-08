@@ -7,23 +7,43 @@
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../../image/mobile/hero-bg-mobile.jpg);
+  
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
   text-align: center;
-  @media not all, screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx)
-   {
-  background-image: linear-gradient(
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ),
-  url(../image/mobile/hero-bg-mobile@2x.jpg);
+
+  @include for-size (mobile-only){
+      background-image: linear-gradient(to right, $linear-gradient, $linear-gradient),
+                url(../image/mobile/hero-bg-mobile.jpg);
+
+      @include for-size (2x) {
+        background-image: linear-gradient(to right, $linear-gradient,$linear-gradient),
+                url(../image/mobile/hero-bg-mobile@2x.jpg);
+      }
   }
+
+  @include for-size (tablet) {
+    background-size: cover;
+    background-image: linear-gradient(to right, $linear-gradient, $linear-gradient),
+                url(../image/tab/hero-bg-tab.jpg);
+
+      @include for-size (2x) {
+        background-image: linear-gradient(to right, $linear-gradient, $linear-gradient),
+                url(../image/tab/hero-bg-tab@2x.jpg);
+      }        
+  }
+
+  @include for-size (desktop) {
+    background-image: linear-gradient(to right, $linear-gradient, $linear-gradient),
+                url(../image/desk/hero-bg-desk.jpg);
+
+      @include for-size (2x) {
+        background-image: linear-gradient(to right, $linear-gradient, $linear-gradient),
+                url(../image/desk/hero-bg-desk@2x.jpg);
+                }   
+  }
+
   @media screen and (min-width: $desktop) {
     height: 600px;
     padding-top: 200px;
