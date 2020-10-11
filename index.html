@@ -80,8 +80,9 @@
                 class="link header__link header__link--gray"
               >
                 <svg class="header__icon header__icon--tel">
-                  <use href="./image/sprite.svg#icon-tel"></use></svg
-                >+38 096 111 11 11</a
+                  <use href="./image/sprite.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a
               >
             </li>
           </ul>
@@ -91,7 +92,6 @@
     </header>
     <!-- Уникальный контент -->
     <main>
-    
       <div class="hero">
         <div class="hero__front">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
@@ -100,8 +100,6 @@
           </button>
         </div>
       </div>
-
-      
       <section class="advantages">
         <div class="container section advantages__section">
           <h2 class="visually-hidden">Преимущества</h2>
@@ -118,7 +116,6 @@
                 формированию позиции.
               </p>
             </li>
-
             <li class="advantages__card">
               <div class="advantages__thumb">
                 <svg class="advantages__icon">
@@ -131,7 +128,6 @@
                 кадров влечет за собой.
               </p>
             </li>
-
             <li class="advantages__card">
               <div class="advantages__thumb">
                 <svg class="advantages__icon">
@@ -144,7 +140,6 @@
                 степени обуславливает.
               </p>
             </li>
-
             <li class="advantages__card">
               <div class="advantages__thumb">
                 <svg class="advantages__icon">
@@ -161,7 +156,6 @@
         </div>
       </section>
 
-      
       <section class="working">
         <div class="container section">
           <h2 class="title section__title">Чем мы занимаемся</h2>
@@ -170,8 +164,10 @@
               <div class="working__thumb">
                 <img
                   src="./image/working/man-typing.jpg"
-                  srcset="./image/working/man-typing@2x.jpg 2x,
-                  ./image/working/man-typing@3x.jpg 3x"
+                  srcset="
+                    ./image/working/man-typing@2x.jpg 2x,
+                    ./image/working/man-typing@3x.jpg 3x
+                  "
                   alt="Человек печатает на клавиатуре, рядом схема"
                   width="370"
                 />
@@ -182,8 +178,10 @@
               <div class="working__thumb">
                 <img
                   src="./image/working/smartphone-in-hand.jpg"
-                  srcset="./image/working/smartphone-in-hand@2x.jpg 2x,
-                  ./image/working/smartphone-in-hand@3x.jpg 3x"
+                  srcset="
+                    ./image/working/smartphone-in-hand@2x.jpg 2x,
+                    ./image/working/smartphone-in-hand@3x.jpg 3x
+                  "
                   alt="Женщина держит телефон сидя перед ноутбуком"
                   width="370"
                 />
@@ -194,8 +192,10 @@
               <div class="working__thumb">
                 <img
                   src="./image/working/tab-color-scheme.jpg"
-                  srcset="./image/working/tab-color-scheme@2x.jpg 2x,
-                  ./image/working/tab-color-scheme@3x.jpg 3x"
+                  srcset="
+                    ./image/working/tab-color-scheme@2x.jpg 2x,
+                    ./image/working/tab-color-scheme@3x.jpg 3x
+                  "
                   alt="Планшет, у него на экране открыта цветовая гамма"
                   width="370"
                 />
@@ -205,29 +205,47 @@
           </ul>
         </div>
       </section>
-    
+
       <section class="team">
         <div class="container section">
           <h2 class="title section__title">Наша команда</h2>
           <ul class="list flexbox team__list">
             <li class="team__card">
               <picture>
-                <source class="team__card--img" srcset="./image/team/desk/igor-1x.jpg, 
-                ./image/team/desk/igor-2x.jpg 2x" 
-                media="(min-width: 1200px)" type="image/webp"/> 
-                <source class="team__card--img" srcset="./image/team/tablet/igor-1x.jpg,
-                ./image/team/tablet/igor-2x.jpg 2x" 
-                media="(min-width: 768px)" type="image/webp"/>
-                <source class="team__card--img" srcset="./image/team/mobile/igor-1x.jpg,
-                ./image/team/mobile/igor-2x.jpg 2x" 
-                media="(min-width: 480px)" type="image/webp"/>
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/desk/igor-1x.jpg,
+                    ./image/team/desk/igor-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/tablet/igor-1x.jpg,
+                    ./image/team/tablet/igor-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/mobile/igor-1x.jpg,
+                    ./image/team/mobile/igor-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
                 <img
-                src="./image/ihor-demyanenko.jpg"
-                alt="Игорь Демьяненко"
-                width="450"
-              />
+                  src="./image/ihor-demyanenko.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__title">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -235,9 +253,7 @@
                   <li class="social__item">
                     <a href="" class="social__link">
                       <svg class="social__icon" width="20" height="20">
-                        <use
-                          href="./image/sprite.svg#icon-instagram"
-                        ></use>
+                        <use href="./image/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -267,23 +283,40 @@
             </li>
             <li class="team__card">
               <picture>
-                <source class="team__card--img" srcset="./image/team/desk/olga-1x.jpg, 
-                ./image/team/desk/olga-2x.jpg 2x" 
-                media="(min-width: 1200px)" type="image/webp"/> 
-                <source class="team__card--img" srcset="./image/team/tablet/olga-1x.jpg,
-                ./image/team/tablet/olga-2x.jpg 2x" 
-                media="(min-width: 768px)" type="image/webp"/>
-                <source class="team__card--img" srcset="./image/team/mobile/olga-1x.jpg,
-                ./image/team/mobile/olga-2x.jpg 2x" 
-                media="(min-width: 480px)" type="image/webp"/>
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/desk/olga-1x.jpg,
+                    ./image/team/desk/olga-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/tablet/olga-1x.jpg,
+                    ./image/team/tablet/olga-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/mobile/olga-1x.jpg,
+                    ./image/team/mobile/olga-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
                 <img
-                src="./image/olga-repina.jpg"
-                alt="Ольга Репина"
-                width="450"
-              
-              />
+                  src="./image/olga-repina.jpg"
+                  alt="Ольга Репина"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__title">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__position">Frontend Developer</p>
@@ -291,9 +324,7 @@
                   <li class="social__item">
                     <a href="" class="social__link">
                       <svg class="social__icon" width="20" height="20">
-                        <use
-                          href="./image/sprite.svg#icon-instagram"
-                        ></use>
+                        <use href="./image/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -323,23 +354,40 @@
             </li>
             <li class="team__card">
               <picture>
-                <source class="team__card--img" srcset="./image/team/desk/kolya-1x.jpg, 
-                ./image/team/desk/kolya-2x.jpg 2x" 
-                media="(min-width: 1200px)" type="image/webp"/> 
-                <source class="team__card--img" srcset="./image/team/tablet/kolya-1x.jpg,
-                ./image/team/tablet/kolya-2x.jpg 2x" 
-                media="(min-width: 768px)" type="image/webp"/>
-                <source class="team__card--img" srcset="./image/team/mobile/kolya-1x.jpg,
-                ./image/team/mobile/kolya-2x.jpg 2x" 
-                media="(min-width: 480px)" type="image/webp"/>
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/desk/kolya-1x.jpg,
+                    ./image/team/desk/kolya-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/tablet/kolya-1x.jpg,
+                    ./image/team/tablet/kolya-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/mobile/kolya-1x.jpg,
+                    ./image/team/mobile/kolya-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
                 <img
-                src="./image/nik-tarasov.jpg"
-                alt="Николай Тарасов"
-                width="450"
-                            
-              />
+                  src="./image/nik-tarasov.jpg"
+                  alt="Николай Тарасов"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__title">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__position">Marketing</p>
@@ -347,9 +395,7 @@
                   <li class="social__item">
                     <a href="" class="social__link">
                       <svg class="social__icon" width="20" height="20">
-                        <use
-                          href="./image/sprite.svg#icon-instagram"
-                        ></use>
+                        <use href="./image/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -379,22 +425,40 @@
             </li>
             <li class="team__card">
               <picture>
-                <source class="team__card--img" srcset="./image/team/desk/misha-1x.jpg, 
-                ./image/team/desk/misha-2x.jpg 2x" 
-                media="(min-width: 1200px)" type="image/webp"/> 
-                <source class="team__card--img" srcset="./image/team/tablet/misha-1x.jpg,
-                ./image/team/tablet/misha-2x.jpg 2x" 
-                media="(min-width: 768px)" type="image/webp"/>
-                <source class="team__card--img" srcset="./image/team/mobile/misha-1x.jpg,
-                ./image/team/mobile/misha-2x.jpg 2x" 
-                media="(min-width: 480px)" type="image/webp"/>
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/desk/misha-1x.jpg,
+                    ./image/team/desk/misha-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/tablet/misha-1x.jpg,
+                    ./image/team/tablet/misha-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  class="team__card--img"
+                  srcset="
+                    ./image/team/mobile/misha-1x.jpg,
+                    ./image/team/mobile/misha-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                  type="image/webp"
+                />
                 <img
-                src="./image/michail-ermakov.jpg"
-                alt="Михаил Ермаков"
-                width="450"
-              />
+                  src="./image/michail-ermakov.jpg"
+                  alt="Михаил Ермаков"
+                  width="450"
+                />
               </picture>
-              
+
               <div class="team__title">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__position">UI Designer</p>
@@ -402,9 +466,7 @@
                   <li class="social__item">
                     <a href="" class="social__link">
                       <svg class="social__icon" width="20" height="20">
-                        <use
-                          href="./image/sprite.svg#icon-instagram"
-                        ></use>
+                        <use href="./image/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
@@ -435,7 +497,7 @@
           </ul>
         </div>
       </section>
-      
+
       <section class="clients">
         <div class="section container">
           <h2 class="title section__title">Постоянные клиенты</h2>
@@ -446,8 +508,9 @@
                   <use
                     href="./image/sprite.svg#icon-client-one"
                     class="client-icon"
-                  ></use></svg
-              ></a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="clients__box">
               <a class="link clients__link" href=""
@@ -455,8 +518,9 @@
                   <use
                     href="./image/sprite.svg#icon-client-two"
                     class="client-icon"
-                  ></use></svg
-              ></a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="clients__box">
               <a class="link clients__link" href=""
@@ -464,8 +528,9 @@
                   <use
                     href="./image/sprite.svg#icon-client-three"
                     class="client-icon"
-                  ></use></svg
-              ></a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="clients__box">
               <a class="link clients__link" href=""
@@ -473,8 +538,9 @@
                   <use
                     href="./image/sprite.svg#icon-client-four"
                     class="client-icon"
-                  ></use></svg
-              ></a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="clients__box">
               <a class="link clients__link" href=""
@@ -482,8 +548,9 @@
                   <use
                     href="./image/sprite.svg#icon-client-five"
                     class="client-icon"
-                  ></use></svg
-              ></a>
+                  ></use>
+                </svg>
+              </a>
             </li>
             <li class="clients__box">
               <a class="link clients__link" href=""
@@ -491,13 +558,14 @@
                   <use
                     href="./image/sprite.svg#icon-client-six"
                     class="client-icon"
-                  ></use></svg
-              ></a>
+                  ></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
       </section>
-    
+
       <footer class="footer">
         <div class="container flexbox footer__container">
           <address class="address">
@@ -570,7 +638,7 @@
           </div>
         </div>
       </footer>
-    </main> 
+    </main>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__exit" data-modal-close>
@@ -668,7 +736,7 @@
           </button>
         </form>
       </div>
-    </div> 
+    </div>
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
     <script>
